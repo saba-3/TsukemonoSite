@@ -1,0 +1,480 @@
+body{
+    margin: 0;
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+    color: #333;
+}
+
+body .resipes{
+    background-color:#7fdb6a10; 
+}
+
+.caption {
+    font-size: 12px;
+    text-align: center;
+    width: 360px;
+    margin:0 auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.caption p {
+    font-weight: bold;
+    margin: 0;
+    color:#6cbb5a;
+}
+
+.site-title{
+    justify-content: space-evenly;
+    background-color: #7fdb6a;
+}
+
+.site-title h1 {
+    margin:0;
+    text-align: center;
+    font-size: 18px;
+    line-height: 64px;
+    font-weight: bold;
+    color:#fff;
+}
+
+.site-title ul {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.site-title li{
+    font-size: 14px;
+    line-height: 64px;
+    margin-right: 18px;
+    font-weight: bold;
+}
+
+.site-title .material-icons {
+    vertical-align: middle;
+}
+
+header li:hover{
+    opacity: 0.5;
+}
+
+header li a {
+    text-decoration: none;
+    color:#fff;
+}
+
+/* トップページ */
+
+.resipes >h1 {
+    margin: 0 ;
+    text-align: center;
+    padding: 24px  0;
+    font-size: 24px;
+    font-weight: normal;
+
+}
+
+.resipes >h1::before{
+    content:'- ';
+}
+
+.resipes >h1::after{
+    content:' -';
+}
+
+.resipes img{
+    width: 240px;
+    height: 160px;
+    border-radius: 4px;
+    transition: transform .3s, opacity .3s;
+}
+
+.resipes img:hover{
+    transform: rotate(1deg);
+    opacity: 0.5;
+    cursor: pointer;
+}
+.resipes img.show:hover,
+.resipes img.show-ume:hover,
+.resipes img.show-alc:hover{
+    transform: none;
+    opacity: 1;
+    cursor:unset;
+}
+
+.resipes h4{
+    font-size: 18px;
+    margin-top: 12px;
+}
+
+.resipes h4.commentR{
+    font-size:14px;
+    color: #6cbb5a;
+}
+.resipes h4.commentU{
+    font-size:14px;
+    color: rgba(241, 13, 101, 0.747);
+}
+.resipes h4.commentA{
+    font-size:14px;
+    color: #6cbb5a;
+}
+
+.resipes ul{
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.resipes li{
+    margin-bottom: 36px;
+}
+
+.resipes table{
+    display: inline-block;
+}
+
+.resipes th {
+    text-align:start;
+    font-weight:normal;
+    font-size: 12px;
+}
+
+.resipes td{
+    text-align: end;
+    font-size: 12px;
+}
+
+.resipes .material-icons{
+    font-size: 12px;
+}
+
+.resipes .button-try{
+    display: block;
+    width:120px;
+    padding:4px 8px;
+    margin: 12px auto;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    background: #6cbb5a;
+
+    transition: opacity .3s;
+}
+
+.resipes .button-try:hover{
+    opacity: 0.7;
+}
+
+
+/* クリックしたら画像と見出しが変わる */
+.shadow-rakkyo,
+.shadow-ume,
+.shadow-alc {
+    display: none;
+}
+
+.show,
+.show-ume,
+.show-alc{
+    display: block;
+    margin: 0 auto;
+}
+
+.hide,
+.hide-ume,
+.hide-alc{
+    display:none;    
+}
+
+ /* manual.html */
+ 
+.manual-title h1{
+    font-size: 18px;
+    text-align: center;
+    margin-top:12px;
+}
+
+h2{
+    margin: 0;
+    font-size: 18px;
+    background:#7fdb6a;
+    font-weight: bold;
+    color:#fff;
+    text-align: center;
+    line-height: 36px;
+}
+
+/* 材料・準備するものエリア */
+.needs table{
+    margin: 18px auto;
+    font-size: 12px;
+    width: 240px;
+}
+
+.table-title{
+    background-color: #7fdb6ac2;
+    text-align: center;
+}
+
+table th{
+    text-align: start;
+}
+
+table td{
+    text-align: center;
+}
+
+/* 漬け方手順エリア */
+.grid-container {
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 200px;
+
+    justify-items: center;
+    margin-top: 64px;
+    gap: 24px;
+}
+
+.manual img{
+    width: 240px;
+    height: 160px;
+    border-radius: 8px;
+}
+
+.manual p {
+    font-size: 16px;
+    margin: 0;
+    margin-left: 4px;
+}
+
+/* 梅酒の漬け方 */
+.grid-container-manual {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    justify-items: center;
+    margin: 24px;
+    gap: 12px;
+}
+
+.grid-container-manual img{
+    width:240px;
+    height: 160px;
+    border-radius: 8px;
+}
+
+.grid-container-manual p{
+    font-size: 14px;
+}
+
+/* 梅酒アレンジ */
+.grid-container-arrange {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 200px;
+
+    justify-items: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    gap: 24px;
+}
+
+.grid-container-arrange img{
+    border-radius: 8px;
+}
+
+.grid-container-arrange p{
+    font-size: 14px;
+    text-align: center;
+}
+
+
+
+/* よくある質問 */
+.q-head{
+    background:#7fdb6a;  
+    font-weight: bold;
+}
+
+.q-head h1{
+    font-size: 18px;
+}
+/* .q-title {
+    margin: 0;
+    font-weight: bold;
+    color:#fff;
+    background-color:#7fdb6a;
+    text-align: center;
+    line-height: 36px;
+} */
+
+.q-title img{
+    width: 24px;
+    height: 24px;
+}
+dl {
+    margin: 0;
+}
+
+dt {
+    padding: 8px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    font-weight: normal;
+}
+
+dt:hover{
+    background-color:#93fd7b53;  
+}
+
+dt::before{
+    content: 'Q. ';
+}
+
+dd {
+    padding: 8px;
+    margin: 0;
+    padding-left: 48px;
+    display: none;
+}
+
+dd::before{
+    content: 'A. ';
+}
+
+dl >div.open dt{
+    background-color: #93fd7b53; 
+}
+
+
+dl >div.open dd{
+    display: block;
+    background-color: #93fd7b53;  ;
+    animation: .3s openAnser;
+}
+
+@keyframes openAnswer {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* about.html */
+.about-site p{
+    font-size: 14px;
+}
+
+/* 下部メニュー */
+.bottom-menu {
+    justify-content: space-evenly;
+}
+
+.bottom-menu ul {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.bottom-menu li{
+    font-size: 14px;
+    line-height: 64px;
+    margin-right: 18px;
+    font-weight: bold;
+}
+
+.bottom-menu .material-icons {
+    vertical-align: middle;
+}
+
+.bottom-menu li:hover{
+    opacity: 0.5;
+}
+
+.bottom-menu li a {
+    text-decoration: none;
+    color:aliceblue;
+}
+
+.message {
+    width: 300px;
+    padding: 4px 16px;
+    background: #6cbb5a;
+    color: #fff;
+    border-radius: 4px;
+    position: fixed;
+    right: 32px;
+    bottom: 16px;
+  
+    animation: notice 3s forwards;
+}
+  
+@keyframes notice {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+      animation-timing-function: ease-out;
+    }
+    20%, 80% {
+      transform: none;
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+}
+
+footer {
+    padding-top:16px;
+    padding-bottom: 16px;
+    color:aliceblue;
+    background: #333631;
+    text-align: center;
+}
+
+
+/* 600px以上になったらスタイルを変える */
+@media (min-width: 600px) { 
+    header .container {
+        display: flex;
+        width: 800px;
+        margin: 0 auto;
+    }
+
+    .resipes ul {
+        width: 800px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .site-title{
+        display: flex;
+        justify-content:space-evenly;
+    }
+
+    .needs {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .umesyu-arrange{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+}
+
